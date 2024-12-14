@@ -64,7 +64,7 @@ export default defineConfig({
     // ],
 
     sidebar: {
-      // "/md/web/css/": set_sidebar("/md/web/css"),
+      "/md/about/": set_sidebar("/md/about/"),
       "/md/web/": set_sidebar("/md/web/"),
     },
 
