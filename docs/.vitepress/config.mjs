@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 import { AnnouncementPlugin } from "vitepress-plugin-announcement";
 import { set_sidebar } from "./utils/auto-sidebar.mjs";
-import { nav } from "./nav"; // 导入 nav 配置
+import { nav } from "./nav.js"; // 导入 nav 配置
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/vitepress-md/", // 基路径，用于构建静态站点的路径
