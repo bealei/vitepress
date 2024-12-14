@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 import { AnnouncementPlugin } from "vitepress-plugin-announcement";
 import { set_sidebar } from "./utils/auto-sidebar.mjs";
-
+import { nav } from "./nav"; // 导入 nav 配置
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/vitepress-md/", // 基路径，用于构建静态站点的路径
@@ -43,15 +43,16 @@ export default defineConfig({
     },
 
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: "主页", link: "/" },
-      { text: "示例", link: "/markdown-examples" },
-      { text: "web", link: "/md/web/" },
-      { text: "vue3", link: "/md/web/vue3/README" },
-      { text: "自动2", link: "/md/java/ee/" },
-      { text: "se", link: "/md/java/se/ee-1" },
-      { text: "关于", link: "/md/about/about" },
-    ],
+    nav, // 使用导入的 nav 配置
+    // nav: [
+    //   { text: "主页", link: "/" },
+    //   { text: "示例", link: "/markdown-examples" },
+    //   { text: "web", link: "/md/web/" },
+    //   { text: "vue3", link: "/md/web/vue3/README" },
+    //   { text: "自动2", link: "/md/java/ee/" },
+    //   { text: "se", link: "/md/java/se/ee-1" },
+    //   { text: "关于", link: "/md/about/about" },
+    // ],
 
     // sidebar: [
     //   {
