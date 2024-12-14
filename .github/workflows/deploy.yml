@@ -1,6 +1,6 @@
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
 # Deploy VitePress site to Pages
-name: VitePress and Sync
+name: VitePress
 
 on:
   # 在针对 `main` 分支的推送上运行。如果你
@@ -40,22 +40,10 @@ jobs:
           # 注意替换为你的 Gitee 目标仓库地址
           destination-repo: git@gitee.com:bealei/vitepress-md.git
       # 11111111111111111111111
-
-      - name: Set permissions
-        run: |
-          sudo chown -R runner:runner /home/runner/work/vitepress-md/vitepress-md
-          sudo chmod -R 755 /home/runner/work/vitepress-md/vitepress-md
-
-      - name: Clear cache
-        run: |
-          rm -rf /home/runner/work/vitepress-md/vitepress-md
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1 # 如果未启用 lastUpdated，则不需要
-          submoudules: recursive
-          clean: true
+          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
       - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消此区域注释
         with:
           version: 9.15.0
