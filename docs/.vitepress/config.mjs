@@ -47,7 +47,7 @@ export default defineConfig({
       { text: "主页", link: "/" },
       { text: "示例", link: "/markdown-examples" },
       { text: "web", link: "/md/web/" },
-      { text: "vue3", link: "/md/web/vue3/readme.md" },
+      { text: "vue3", link: "/md/web/vue3/README.md" },
       { text: "自动2", link: "/md/java/ee/" },
       { text: "se", link: "/md/java/se/ee-1" },
       { text: "关于", link: "/md/about/about" },
