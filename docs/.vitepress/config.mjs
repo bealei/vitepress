@@ -2,7 +2,8 @@ import { defineConfig } from "vitepress";
 import { AnnouncementPlugin } from "vitepress-plugin-announcement";
 // import { set_sidebar } from "./utils/auto-sidebar.mjs";
 import { nav } from "./utils/nav"; // 导入 nav 配置
-import { sidebar } from "./sidebar"; // 导入 sidebar 配置
+import { sidebar } from "./utils/sidebar"; // 导入 sidebar 配置
+import { announcementPlugin } from "./utils/announcementPlugin"; // 导入 announcementPlugin 配置
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
