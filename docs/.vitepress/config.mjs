@@ -1,7 +1,9 @@
 import { defineConfig } from "vitepress";
 import { AnnouncementPlugin } from "vitepress-plugin-announcement";
-import { set_sidebar } from "./utils/auto-sidebar.mjs";
+// import { set_sidebar } from "./utils/auto-sidebar.mjs";
 import { nav } from "./utils/nav"; // 导入 nav 配置
+import { sidebar } from "./sidebar"; // 导入 sidebar 配置
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/vitepress-md/", // 基路径，用于构建静态站点的路径
@@ -64,11 +66,11 @@ export default defineConfig({
     //   },
     // ],
 
-    sidebar: {
-      "/md/about/": set_sidebar("/md/about/"),
-      "/md/web/": set_sidebar("/md/web/"),
-    },
-
+    // sidebar: {
+    //   "/md/about/": set_sidebar("/md/about/"),
+    //   "/md/web/": set_sidebar("/md/web/"),
+    // },
+    sidebar,
     //社交链接
     socialLinks: [
       { icon: "github", link: "https://github.com/vuejs/vitepress" },
@@ -81,41 +83,42 @@ export default defineConfig({
   vite: {
     // ↓↓↓↓↓
     plugins: [
-      AnnouncementPlugin({
-        title: "公告",
-        body: [
-          { type: "text", content: "👇公众号👇 ---👇 赞赏 👇" },
-          {
-            type: "image",
-            src: "https://cdn.upyun.sugarat.top/mdImg/sugar/85c9554d023be2fcc5aab94effeef033",
-            style: "display: inline-block;width:46%;padding-right:6px",
-          },
-          {
-            type: "image",
-            src: "https://cdn.upyun.sugarat.top/mdImg/sugar/54eacf3e730af9c1e3542a4800a422ea",
-            style: "display: inline-block;width:46%;padding-left:6px",
-          },
-        ],
-        footer: [
-          {
-            type: "text",
-            content: "footer content",
-          },
-          {
-            type: "button",
-            content: "作者博客",
-            link: "https://sugarat.top",
-          },
-          {
-            type: "button",
-            content: "博客主题",
-            link: "https://theme.sugarat.top",
-            props: {
-              type: "success",
-            },
-          },
-        ],
-      }),
+      announcementPlugin, // 使用导入的 announcementPlugin 配置
+      // AnnouncementPlugin({
+      //   title: "公告",
+      //   body: [
+      //     { type: "text", content: "👇公众号👇 ---👇 赞赏 👇" },
+      //     {
+      //       type: "image",
+      //       src: "https://cdn.upyun.sugarat.top/mdImg/sugar/85c9554d023be2fcc5aab94effeef033",
+      //       style: "display: inline-block;width:46%;padding-right:6px",
+      //     },
+      //     {
+      //       type: "image",
+      //       src: "https://cdn.upyun.sugarat.top/mdImg/sugar/54eacf3e730af9c1e3542a4800a422ea",
+      //       style: "display: inline-block;width:46%;padding-left:6px",
+      //     },
+      //   ],
+      //   footer: [
+      //     {
+      //       type: "text",
+      //       content: "footer content",
+      //     },
+      //     {
+      //       type: "button",
+      //       content: "作者博客",
+      //       link: "https://sugarat.top",
+      //     },
+      //     {
+      //       type: "button",
+      //       content: "博客主题",
+      //       link: "https://theme.sugarat.top",
+      //       props: {
+      //         type: "success",
+      //       },
+      //     },
+      //   ],
+      // }),
     ],
     // ↑↑↑↑↑
   },
