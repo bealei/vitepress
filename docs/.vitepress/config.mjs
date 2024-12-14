@@ -4,7 +4,7 @@ import { set_sidebar } from "./utils/auto-sidebar.mjs";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/", // 基路径，用于构建静态站点的路径
+  base: "/vitepress-md/", // 基路径，用于构建静态站点的路径
   lang: "zh-CN",
   head: [["link", { rel: "icon", href: "/logo.png" }]],
   title: "zhuanglei",
