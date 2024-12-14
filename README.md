@@ -12,6 +12,10 @@ gitee：https://gitee.com/bealei
 
 
 
+发布页：https://io.zhuanglei.top/vitepress-md/
+
+
+
 :::tip
 
 vitepress-md 1.5版本

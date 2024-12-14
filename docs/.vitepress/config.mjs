@@ -49,8 +49,8 @@ export default defineConfig({
       { text: "web", link: "/md/web/" },
       { text: "vue3", link: "/md/web/vue3/readme" },
       { text: "自动2", link: "/md/java/ee/" },
-      { text: "se", link: "/md/java/se/" },
-      { text: "关于", link: "/md/about/readme" },
+      { text: "se", link: "/md/java/se/ee-1" },
+      { text: "关于", link: "/md/about/about" },
     ],
 
     // sidebar: [
